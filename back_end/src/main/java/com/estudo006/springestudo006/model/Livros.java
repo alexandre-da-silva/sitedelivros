@@ -1,5 +1,6 @@
 package com.estudo006.springestudo006.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,14 +12,14 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "usuarios")
-public class Usuario {
+public class Livros {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @Column(nullable = false, unique = true)
-    private String email;
-    @Column(nullable = false)
-    private String senha;
+    @Column(name = "nome")
+    private String nome;
+    @Column(name = "autor")
+    private String autor;
+
 }
